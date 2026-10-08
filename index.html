@@ -106,6 +106,11 @@ input,select,textarea{font:400 1rem Poppins,sans-serif;padding:14px;border:1px s
 #msg{font-size:.9rem;color:var(--acc)}
 footer{padding:28px 0;text-align:center;font-size:.85rem;opacity:.65;border-top:1px solid var(--line)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.proj{cursor:pointer}.more{display:block;margin-top:12px;font-size:.9rem;font-weight:500;color:var(--acc)}
+dialog{border:0;border-radius:16px;padding:22px;max-width:520px;width:calc(100% - 32px);max-height:88vh;overflow:auto;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(17,24,39,.6)}
+#x{float:right;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);font-size:1.1rem;cursor:pointer}
+dialog .thumb{clear:both}
 </style>
 </head>
 <body>
@@ -249,6 +254,7 @@ footer{padding:28px 0;text-align:center;font-size:.85rem;opacity:.65;border-top:
 </form>
 </div></section>
 </main>
+<dialog id="dlg" aria-label="Project details"><button id="x" aria-label="Close">✕</button><div id="dc"></div></dialog>
 <footer>© DD DESIGNS · Durgadevi</footer>
 
 <script>
@@ -266,8 +272,15 @@ const P=[
 const fe=document.getElementById("filters"),pe=document.getElementById("projects");
 F.forEach((n,i)=>{const b=document.createElement("button");b.textContent=n;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{[...fe.children].forEach(x=>x.setAttribute("aria-pressed",x==b));draw(n)};fe.appendChild(b)});
 function tc(h){const n=parseInt(h.slice(1),16);return((n>>16)*299+(n>>8&255)*587+(n&255)*114)/1000<140?"#fff":"#111827"}
-function draw(f){pe.innerHTML=P.filter(p=>f=="All"||p.c.includes(f)).map(p=>`<article class="card proj"><div class="thumb" style="background:${p.k[2]}22">${p.m.map((x,i)=>`<div style="background:${p.k[i%3]};color:${tc(p.k[i%3])}">${x}</div>`).join("")}</div>${p.c.map(c=>`<span class="tag">${c}</span>`).join("")}<h3>${p.t}</h3><p>${p.d}</p><div class="swatch">${p.k.map(c=>`<i style="background:${c}"></i>`).join("")}</div></article>`).join("")||"<p>No projects yet.</p>"}
+function draw(f){pe.innerHTML=P.filter(p=>f=="All"||p.c.includes(f)).map(p=>`<article class="card proj" data-i="${P.indexOf(p)}" tabindex="0" role="button" aria-label="Open ${p.t}"><div class="thumb" style="background:${p.k[2]}22">${p.m.map((x,i)=>`<div style="background:${p.k[i%3]};color:${tc(p.k[i%3])}">${x}</div>`).join("")}</div>${p.c.map(c=>`<span class="tag">${c}</span>`).join("")}<h3>${p.t}</h3><p>${p.d}</p><div class="swatch">${p.k.map(c=>`<i style="background:${c}"></i>`).join("")}</div><span class="more">View details →</span></article>`).join("")||"<p>No projects yet.</p>"}
 draw("All");
+const W=[["Logo","Brand color palette","Typography","Saree/kurti promotional poster","Instagram post","Offer poster","Business card","Packaging mockup"],["Instagram educational post","Product promotion","Carousel","Story","Promotional poster"],["3 Instagram posts","1 carousel","1 promotional post","1 story"],["Cover","Interior drawing page","Coloring page","Activity page","Number/letter learning page"],["Logo","Business card","Poster","Price list","Social media post"],["Cover slide","About slide","Services slide","Data slide","Product/service slide","CTA slide"]];
+const dlg=document.getElementById("dlg"),dc=document.getElementById("dc");
+function show(i){const p=P[i];dc.innerHTML=`<div class="thumb" style="background:${p.k[2]}22">${p.m.map((x,j)=>`<div style="background:${p.k[j%3]};color:${tc(p.k[j%3])}">${x}</div>`).join("")}</div>${p.c.map(c=>`<span class="tag">${c}</span>`).join("")}<h3>${p.t}</h3><p>${p.d}</p><p class="sub">What's included</p><ul>${W[i].map(w=>`<li>${w}</li>`).join("")}</ul><p class="note">Concept Project — not real client work.</p><a class="btn p" id="go" href="#contact" style="width:100%">Want something like this?</a>`;document.getElementById("go").onclick=()=>dlg.close();dlg.showModal()}
+pe.onclick=e=>{const a=e.target.closest(".proj");if(a)show(+a.dataset.i)};
+pe.onkeydown=e=>{if(e.key=="Enter"){const a=e.target.closest(".proj");if(a)show(+a.dataset.i)}};
+document.getElementById("x").onclick=()=>dlg.close();
+dlg.onclick=e=>{if(e.target==dlg)dlg.close()};
 const bg=document.getElementById("burger"),nv=document.getElementById("nav");
 bg.onclick=()=>{const o=nv.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
 nv.onclick=e=>{if(e.target.tagName=="A"){nv.classList.remove("open");bg.setAttribute("aria-expanded",false)}};
