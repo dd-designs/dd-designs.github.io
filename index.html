@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DD DESIGNS — Canva Design & Copywriting for Small Businesses</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F2937;--pri:#111827;--onpri:#fff;--bg:#F9FAFB;--sec:#F3F0FF;--acc:#7C3AED;--soft:#A78BFA;--line:#e2dcf3;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#F3F0FF;--pri:#A78BFA;--onpri:#111827;--bg:#111827;--sec:#1b2335;--acc:#A78BFA;--line:#2d3650;--card:#1a2234}}
+:root[data-theme="dark"]{--ink:#F3F0FF;--pri:#A78BFA;--onpri:#111827;--bg:#111827;--sec:#1b2335;--acc:#A78BFA;--line:#2d3650;--card:#1a2234}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Poppins,system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+h1{font-size:clamp(2.6rem,9vw,4.8rem);letter-spacing:-.01em}
+h2{font-size:clamp(2rem,6vw,3rem);margin-bottom:12px}
+h3{font-size:1.45rem;margin-bottom:8px}
+p{margin:0 0 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.alt{background:var(--sec)}
+.lead{max-width:560px;opacity:.8}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.5rem;letter-spacing:.08em;text-decoration:none;color:var(--ink)}
+nav a{color:var(--ink);text-decoration:none;font-size:.95rem;margin-left:26px}
+nav a:hover{color:var(--acc)}
+#burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:44px;height:44px;font-size:1.3rem;color:var(--ink)}
+@media(max-width:760px){#burger{display:block}nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 16px}nav.open{display:block}nav a{display:block;margin:0;padding:14px 0;font-size:1.1rem;border-bottom:1px solid var(--line)}}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font:500 1rem Poppins,sans-serif;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;text-align:center}
+.btn.p{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.btn.s{background:transparent;color:var(--ink)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+@media(max-width:480px){.cta .btn{width:100%}}
+.hero{padding:48px 0 72px}
+.hgrid{display:grid;gap:44px;align-items:center}
+@media(min-width:860px){.hgrid{grid-template-columns:1.05fr .95fr}}
+.cred{font-size:.9rem;color:var(--acc);font-weight:500}
+/* collage */
+.collage{position:relative;height:380px;max-width:440px;margin:0 auto;width:100%}
+.collage>div{position:absolute;box-shadow:0 14px 34px rgba(0,0,0,.14);border-radius:10px}
+.ig{left:0;top:10px;width:58%;aspect-ratio:1;background:#111827;color:#F3F0FF;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;transform:rotate(-4deg)}
+.ig b{font:600 1.5rem/1.05 'Cormorant Garamond',serif}.ig small{color:#A78BFA;font-size:.7rem}
+.bc{right:0;top:60px;width:52%;aspect-ratio:1.7;background:var(--card);padding:12px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(5deg);border:1px solid var(--line)}
+.bc b{font:700 1.1rem 'Cormorant Garamond',serif;letter-spacing:.1em}.bc small{font-size:.62rem;opacity:.6}
+.lg{left:24%;bottom:0;width:40%;aspect-ratio:1;background:var(--sec);display:grid;place-items:center;font:700 2.6rem 'Cormorant Garamond',serif;color:var(--acc);border:1px solid var(--line)}
+.lg span{border:2px solid var(--acc);border-radius:50%;width:76px;height:76px;display:grid;place-items:center}
+.br{right:2%;bottom:14px;width:34%;aspect-ratio:.7;background:var(--soft);padding:10px;display:flex;flex-direction:column;gap:6px;transform:rotate(-3deg)}
+.br i{display:block;height:6px;background:var(--ink);opacity:.35;border-radius:3px}.br i:first-child{height:28px;background:var(--acc);opacity:1}
+/* about */
+.about{display:grid;gap:36px;align-items:center}
+@media(min-width:860px){.about{grid-template-columns:.9fr 1.1fr}}
+.desk{aspect-ratio:4/3;background:var(--sec);border:1px solid var(--line);border-radius:14px;position:relative;overflow:hidden}
+.desk .sc{position:absolute;left:14%;top:14%;width:52%;height:50%;background:var(--card);border:6px solid var(--pri);border-radius:8px;padding:10px}
+.desk .sc i{display:block;height:8px;border-radius:4px;background:var(--soft);margin-bottom:7px}.desk .sc i:first-child{width:50%;background:var(--acc)}
+.desk .nb{position:absolute;right:10%;bottom:12%;width:28%;height:34%;background:var(--acc);border-radius:4px;transform:rotate(6deg)}
+.desk .cup{position:absolute;right:14%;top:16%;width:12%;aspect-ratio:1;background:var(--soft);border-radius:0 0 40% 40%}
+.ph{font-size:.78rem;opacity:.55;margin-top:8px}
+/* cards */
+.grid{display:grid;gap:16px;margin-top:30px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card ul{margin:0;padding-left:18px;font-size:.93rem}.card li{margin:3px 0}
+.card h3 span{color:var(--acc)}
+.sub{font-weight:500;margin:14px 0 4px;font-size:.95rem}
+/* filters */
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;margin-top:24px;scrollbar-width:none}
+.filters button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 18px;border-radius:999px;font:500 .9rem Poppins,sans-serif;cursor:pointer;min-height:44px}
+.filters button[aria-pressed=true]{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.proj{display:flex;flex-direction:column}
+.thumb{height:210px;border-radius:10px;padding:14px;display:flex;gap:8px;align-items:stretch;margin-bottom:16px;overflow:hidden}
+.thumb div{flex:1;border-radius:6px;padding:10px;display:flex;flex-direction:column;justify-content:flex-end;font:600 1.05rem/1.1 'Cormorant Garamond',serif;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.thumb div:nth-child(2){transform:translateY(-14px)}.thumb div:nth-child(3){transform:translateY(10px)}
+.tag{display:inline-block;font-size:.78rem;background:var(--sec);border:1px solid var(--line);border-radius:6px;padding:2px 10px;margin:0 6px 10px 0}
+.proj p{font-size:.92rem;opacity:.85}
+.swatch{display:flex;gap:6px;margin-top:auto;padding-top:6px}.swatch i{width:24px;height:24px;border-radius:50%;border:1px solid var(--line)}
+/* process */
+.steps{counter-reset:s;display:grid;gap:16px;margin-top:30px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps .card::before{counter-increment:s;content:"0" counter(s);font:600 2.4rem 'Cormorant Garamond',serif;color:var(--acc);display:block}
+/* flow */
+.flow{display:grid;gap:10px;margin-top:30px;max-width:520px}
+.flow div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.flow div.ar{background:none;border:0;padding:0;text-align:center;color:var(--acc);font-size:1.3rem;line-height:1}
+.flow .post{background:#F3F0FF;color:#111827;border-color:#d9d0f5;font:600 1.5rem/1.1 'Cormorant Garamond',serif}
+/* pricing */
+.price .btn{margin-top:14px;width:100%}
+.amt{font:600 1.5rem 'Cormorant Garamond',serif;color:var(--acc);margin-top:10px}
+.note{font-size:.88rem;opacity:.7;margin-top:18px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-bottom:10px;max-width:760px}
+summary{cursor:pointer;padding:18px 0;font-weight:500;min-height:44px}
+details p{opacity:.85}
+.cl{background:var(--pri);color:var(--onpri);text-align:center}
+.cl .btn.p{background:#fff;color:#111827;border-color:#fff}.cl .btn.s{color:var(--onpri);border-color:var(--onpri)}
+.cl .cta{justify-content:center}.cl p{max-width:600px;margin:14px auto;opacity:.85}
+.cgrid{display:grid;gap:36px}
+@media(min-width:860px){.cgrid{grid-template-columns:.8fr 1.2fr}}
+.ct p{margin-bottom:6px}.ct b{display:block;font-size:.85rem;color:var(--acc);font-weight:500}
+form{display:grid;gap:14px}
+label{font-size:.9rem;font-weight:500;display:grid;gap:6px}
+input,select,textarea{font:400 1rem Poppins,sans-serif;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);width:100%}
+.two{display:grid;gap:14px}@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#msg{font-size:.9rem;color:var(--acc)}
+footer{padding:28px 0;text-align:center;font-size:.85rem;opacity:.65;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#home">DD DESIGNS</a>
+<button id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+<nav id="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap hgrid">
+<div>
+<p class="cred">Canva Design • Content Writing • Copywriting</p>
+<h1>Design That Makes Your Business Look Professional.</h1>
+<p class="lead" style="margin-top:20px;font-size:1.1rem">Canva design, content writing &amp; copywriting for small businesses — simple, creative and affordable.</p>
+<p class="lead">I help small business owners turn their ideas into professional visuals and clear, engaging content that is ready to use online and offline.</p>
+<div class="cta"><a class="btn p" href="#portfolio">View My Work</a><a class="btn s" href="#contact">Work With Me</a></div>
+</div>
+<div class="collage" aria-hidden="true">
+<div class="ig"><small>Concept</small><b>New festive collection</b></div>
+<div class="bc"><b>AAVIRA</b><small>Your Name · Founder<br>hello@yourbrand.com</small></div>
+<div class="lg"><span>A</span></div>
+<div class="br"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap about">
+<div><div class="desk" role="img" aria-label="Designer workspace placeholder"><div class="sc"><i></i><i></i><i></i></div><div class="cup"></div><div class="nb"></div></div><p class="ph">Replace with a photo of your workspace.</p></div>
+<div>
+<h2>Hi, I'm Durgadevi.</h2>
+<p>I'm a freelance Canva designer and content/copywriter who enjoys helping small businesses present themselves professionally.</p>
+<p>From logos and social media designs to brochures, business cards, presentations and marketing content, I create practical visual and written solutions that small businesses can actually use.</p>
+<p>My goal is simple: make professional design and useful content accessible to businesses working with a realistic budget.</p>
+</div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>Canva Design Services</h2>
+<p class="lead">Everything a small business needs to look consistent and professional.</p>
+<div class="grid g3">
+<div class="card"><h3>Brand &amp; Identity</h3><ul><li>Logo Design</li><li>Basic Brand Visuals</li><li>Brand Color &amp; Typography Suggestions</li><li>Simple Brand Guidelines</li></ul></div>
+<div class="card"><h3>Social Media Design</h3><ul><li>Instagram Posts &amp; Carousels</li><li>Promotional, Product &amp; Offer Posts</li><li>Educational &amp; Quote Posts</li><li>Story Designs</li><li>Content Templates</li></ul></div>
+<div class="card"><h3>Business Materials</h3><ul><li>Business Cards</li><li>Brochures, Flyers &amp; Posters</li><li>Price Lists &amp; Menus</li><li>Certificates &amp; Letterheads</li><li>Digital Invitations</li></ul></div>
+<div class="card"><h3>Marketing &amp; Presentation</h3><ul><li>Business Presentations</li><li>Pitch Decks</li><li>Product &amp; Service Presentations</li><li>Sales / Promotional Materials</li></ul></div>
+<div class="card"><h3>Kids &amp; Education</h3><ul><li>Kids Drawing Books</li><li>Activity Sheets &amp; Worksheets</li><li>Coloring Pages</li><li>Educational Printables</li><li>Learning Materials</li></ul></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Design + Words That Work Together</h2>
+<p class="lead">Clear words help people understand what you offer. I help you say it simply.</p>
+<div class="grid">
+<div class="card"><h3>Content Writing</h3><ul><li>Social media captions</li><li>Educational content</li><li>Product / service descriptions</li><li>Simple business content</li><li>Instagram content ideas</li><li>Promotional content</li></ul></div>
+<div class="card"><h3>Copywriting</h3><ul><li>Social media promotional copy</li><li>Product captions</li><li>Offer copy &amp; ad copy</li><li>Call-to-action copy</li><li>Short marketing messages</li><li>Business profile / bio copy</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Why Work With Me?</h2>
+<div class="grid g3">
+<div class="card"><h3>Affordable</h3><p>Professional-looking design solutions suitable for small-business budgets.</p></div>
+<div class="card"><h3>One-Stop Creative Support</h3><p>Get design and content support in one place.</p></div>
+<div class="card"><h3>Simple Communication</h3><p>I keep the process clear and easy to understand.</p></div>
+<div class="card"><h3>Business-Focused Design</h3><p>Designs are created with your business, audience and purpose in mind.</p></div>
+<div class="card"><h3>Custom, Not Random</h3><p>No generic-looking designs — visuals are built around your individual business.</p></div>
+<div class="card"><h3>Practical Deliverables</h3><p>Designs made to be used for social media, marketing, printing or business communication.</p></div>
+</div></div></section>
+
+<section class="alt" id="portfolio"><div class="wrap">
+<h2>My Work</h2>
+<p class="lead">Portfolio concepts showing how I design for different businesses. All projects below are <b>Concept Projects</b>, not real client work.</p>
+<div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+<div class="grid g3" id="projects"></div>
+<p class="note">Swap the colored mockups with your own exported designs when ready.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>My Design Process</h2>
+<div class="steps">
+<div class="card"><h3>Understand</h3><p>I understand your business, audience and design requirement.</p></div>
+<div class="card"><h3>Plan</h3><p>I decide the visual direction, content structure and design approach.</p></div>
+<div class="card"><h3>Create</h3><p>I develop the design/content using Canva and refine it based on feedback.</p></div>
+<div class="card"><h3>Deliver</h3><p>You receive the final files in the required format, ready to use.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Need Both Design &amp; Content?</h2>
+<p class="lead">Instead of searching for one person for the design and another for the words, you can get both creative services together.</p>
+<div class="flow">
+<div><small>Business idea</small><br>New skincare product launch</div><div class="ar">↓</div>
+<div><small>Copy</small><br>“Your everyday skincare routine, made simpler.”</div><div class="ar">↓</div>
+<div><small>Visual design</small><br>Clean layout, brand colors, product focus</div><div class="ar">↓</div>
+<div class="post"><small style="font:400 .8rem Poppins">Ready-to-publish post (concept)</small><br>Your everyday skincare routine, made simpler.</div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Affordable Packages</h2>
+<p class="lead">Starting points you can adjust to your needs.</p>
+<div class="grid">
+<div class="card price"><h3>Starter</h3><p>For businesses needing occasional designs.</p><ul><li>3 social media designs</li><li>Basic caption support</li><li>1 revision round</li></ul><div class="amt">Starting from ₹___</div><a class="btn s" href="#contact">Choose Starter</a></div>
+<div class="card price"><h3>Social Media</h3><p>For businesses that need regular content.</p><ul><li>8–12 social media designs</li><li>Caption/content support</li><li>Promotional designs</li><li>Consistent visual style</li></ul><div class="amt">Starting from ₹___</div><a class="btn s" href="#contact">Choose Social Media</a></div>
+<div class="card price"><h3>Brand Starter</h3><p>For new businesses.</p><ul><li>Logo</li><li>Color palette &amp; typography</li><li>Business card</li><li>Social media starter design</li></ul><div class="amt">Starting from ₹___</div><a class="btn s" href="#contact">Choose Brand Starter</a></div>
+<div class="card price"><h3>Custom</h3><p>For brochures, presentations, invitations, kids books and other requirements.</p><div class="amt">Let's discuss your project</div><a class="btn p" href="#contact">Start a Chat</a></div>
+</div>
+<p class="note">Final pricing depends on project type, number of designs, complexity and revisions.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Before You Contact Me</h2><div style="margin-top:24px">
+<details><summary>Do you only design in Canva?</summary><p>I specialize in Canva-based design and create professional, practical designs suitable for digital and print use.</p></details>
+<details><summary>Can you write the content too?</summary><p>Yes. I provide content writing and copywriting support for small businesses.</p></details>
+<details><summary>Can you create custom designs?</summary><p>Yes. Designs are created according to your business, audience, content and requirements.</p></details>
+<details><summary>Do you work with small businesses?</summary><p>Yes. My services are specifically designed to be accessible to small businesses, entrepreneurs and growing brands.</p></details>
+<details><summary>Can you create both design and content for social media?</summary><p>Yes. I can help with both the visual design and the written content.</p></details>
+<details><summary>How do I start?</summary><p>Send me your business details, requirements, references and deadline. I'll review the project and share the next steps.</p></details>
+</div></div></section>
+
+<section><div class="wrap"><h2>Testimonials</h2><p class="lead">Client testimonials coming soon.</p></div></section>
+
+<section class="cl"><div class="wrap">
+<h2>Have a Business Idea? Let's Turn It Into Something Professional.</h2>
+<p>Whether you need a logo, social media design, business card, brochure, presentation, invitation, kids activity book, content or copywriting — tell me what you need.</p>
+<div class="cta"><a class="btn p" href="#contact">Start a Project</a><a class="btn s" href="#portfolio">View Portfolio</a></div>
+</div></section>
+
+<section id="contact"><div class="wrap cgrid">
+<div class="ct">
+<h2>Let's Work Together</h2>
+<p class="lead">Tell me about your project and I'll reply with next steps.</p>
+<p><b>WhatsApp</b>[Add your WhatsApp number]</p>
+<p><b>Email</b>[Add your email]</p>
+<p><b>Instagram</b>[Add your Instagram handle]</p>
+<p><b>Portfolio link</b>[Add your portfolio link]</p>
+</div>
+<form id="f">
+<div class="two"><label>Name<input name="Name" required autocomplete="name"></label><label>Business Name<input name="Business" autocomplete="organization"></label></div>
+<label>What do you need?<select name="Need"><option>Logo / Branding</option><option>Social media designs</option><option>Business card / print</option><option>Presentation</option><option>Kids activity / drawing book</option><option>Content / copywriting</option><option>Something else</option></select></label>
+<div class="two"><label>Budget<input name="Budget" placeholder="e.g. ₹3,000"></label><label>Deadline<input name="Deadline" placeholder="e.g. 10 days"></label></div>
+<label>Reference / Style<input name="Reference" placeholder="Link or describe the style you like"></label>
+<label>Message<textarea name="Message" rows="4"></textarea></label>
+<button class="btn p" type="submit">Send Project Enquiry</button>
+<p id="msg" role="status"></p>
+</form>
+</div></section>
+</main>
+<footer>© DD DESIGNS · Durgadevi</footer>
+
+<script>
+// ---- EDIT HERE ----
+const CONTACT={email:"",whatsapp:""}; // email: you@example.com | whatsapp: country code + number, e.g. 919876543210
+// -------------------
+const F=["All","Branding","Social Media","Business","Print","Kids & Education","Presentation","Content"];
+const P=[
+{t:"AAVIRA — Concept Brand Project",c:["Branding","Social Media","Business","Print"],d:"Premium visual direction for an ethnic-wear brand using an elegant burgundy, cream and antique-gold palette. Logo, poster, Instagram post, offer poster, business card and packaging.",k:["#5b1e2b","#c9ad7a","#f5ead7"],m:["AAVIRA","New saree collection","Festive offer"]},
+{t:"Beauty & Skincare — Concept Project",c:["Social Media","Content"],d:"Clean, trustworthy skincare look: educational post, product promotion, carousel, story and promo poster.",k:["#e8efe6","#9bb5a0","#fff"],m:["Know your SPF","Gentle daily care","Launch offer"]},
+{t:"Small Business Social Media — Concept Project",c:["Social Media","Content"],d:"A consistent Instagram presence: 3 posts, 1 carousel, 1 promotional post and 1 story in one visual style.",k:["#F3F0FF","#A78BFA","#111827"],m:["Post 1","Carousel","Story"]},
+{t:"Kids Drawing Book — Concept Project",c:["Kids & Education","Print"],d:"Playful, professionally designed cover, drawing page, coloring page, activity page and number/letter learning page.",k:["#ffe9a8","#8fd3c7","#ff9f7a"],m:["Draw &amp; Color","ABC","123"]},
+{t:"Local Business Branding — Concept Project",c:["Branding","Business","Print"],d:"One visual identity applied to logo, business card, poster, price list and social media post.",k:["#2f4a3a","#d8cec0","#fffdf8"],m:["Logo","Price list","Poster"]},
+{t:"Business Presentation — Concept Project",c:["Presentation","Business"],d:"Modern deck: cover, about, services, data, product/service and CTA slides.",k:["#111827","#7C3AED","#F3F0FF"],m:["Cover","Services","Let's talk"]}];
+const fe=document.getElementById("filters"),pe=document.getElementById("projects");
+F.forEach((n,i)=>{const b=document.createElement("button");b.textContent=n;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{[...fe.children].forEach(x=>x.setAttribute("aria-pressed",x==b));draw(n)};fe.appendChild(b)});
+function tc(h){const n=parseInt(h.slice(1),16);return((n>>16)*299+(n>>8&255)*587+(n&255)*114)/1000<140?"#fff":"#111827"}
+function draw(f){pe.innerHTML=P.filter(p=>f=="All"||p.c.includes(f)).map(p=>`<article class="card proj"><div class="thumb" style="background:${p.k[2]}22">${p.m.map((x,i)=>`<div style="background:${p.k[i%3]};color:${tc(p.k[i%3])}">${x}</div>`).join("")}</div>${p.c.map(c=>`<span class="tag">${c}</span>`).join("")}<h3>${p.t}</h3><p>${p.d}</p><div class="swatch">${p.k.map(c=>`<i style="background:${c}"></i>`).join("")}</div></article>`).join("")||"<p>No projects yet.</p>"}
+draw("All");
+const bg=document.getElementById("burger"),nv=document.getElementById("nav");
+bg.onclick=()=>{const o=nv.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+nv.onclick=e=>{if(e.target.tagName=="A"){nv.classList.remove("open");bg.setAttribute("aria-expanded",false)}};
+document.getElementById("f").onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);const txt=[...d].map(([k,v])=>k+": "+v).join("\n");const m=document.getElementById("msg");
+if(CONTACT.whatsapp){location.href="https://wa.me/"+CONTACT.whatsapp+"?text="+encodeURIComponent("Project enquiry\n"+txt)}
+else if(CONTACT.email){location.href="mailto:"+CONTACT.email+"?subject="+encodeURIComponent("Project enquiry")+"&body="+encodeURIComponent(txt)}
+else m.textContent="Add your WhatsApp or email in the CONTACT setting at the top of the script to receive enquiries."};
+</script>
+</body>
+</html>
